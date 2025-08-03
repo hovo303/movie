@@ -1,0 +1,124 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #040404;
+  color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* Utility classes */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.w-full { 
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+}
+.h-full { height: 100%; }
+.min-h-screen { 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.overflow-hidden { overflow: hidden; }
+.overflow-x-auto { overflow-x: auto; }
+.cursor-pointer { cursor: pointer; }
+.transition-opacity { transition: opacity 0.2s ease; }
+.transition-colors { transition: color 0.2s ease; }
+.transition-transform { transition: transform 0.3s ease; }
+.hover\:opacity-90:hover { opacity: 0.9; }
+.hover\:scale-105:hover { transform: scale(1.05); }
+
+/* Spacing utilities */
+.p-3 { padding: 0.75rem; }
+.px-12 { padding-left: 3rem; padding-right: 3rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-2 { margin-top: 0.5rem; }
+
+/* Layout utilities */
+.z-50 { z-index: 50; }
+.z-10 { z-index: 10; }
+.top-0 { top: 0; }
+.left-0 { left: 0; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+/* Color utilities */
+.bg-gray-900 { background-color: #040404; }
+.text-white { color: #ffffff; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+
+/* Border utilities */
+.border-0 { border: none; }
+.outline-none { outline: none; }
+.rounded-lg { border-radius: 0.5rem; }
+
+/* Flexbox utilities */
+.space-x-4 > * + * { margin-left: 1rem; }
+.gap-4 { gap: 1rem; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-shrink-0 { flex-shrink: 0; }
+
+/* Text utilities */
+.text-sm { font-size: 0.875rem; }
+.text-2xl { font-size: 1.5rem; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.uppercase { text-transform: uppercase; }
+
+/* Width utilities */
+.w-48 { width: 12rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-md { max-width: 28rem; }
+
+/* Height utilities */
+.h-72 { height: 18rem; }
+
+/* Background utilities */
+.bg-cover { background-size: cover; }
+.bg-center { background-position: center; }
+
+/* Object utilities */
+.object-cover { object-fit: cover; }
+
+/* Scrollbar hide */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

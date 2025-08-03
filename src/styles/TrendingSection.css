@@ -1,0 +1,140 @@
+/* TrendingSection Component Styles */
+
+.trending-section {
+  position: relative;
+  background: radial-gradient(ellipse 120% 120% at center center, #040404 40%, rgba(4, 4, 4, 0.8) 60%, rgba(4, 4, 4, 0.4) 80%, rgba(4, 4, 4, 0.1) 90%, transparent 100%);
+  padding: 3rem;
+  z-index: 5;
+}
+
+.trending-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.trending-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.trending-carousel-container {
+  position: relative;
+}
+
+.trending-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 1rem;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.trending-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-carousel.dragging {
+  scroll-behavior: auto;
+  cursor: grabbing;
+}
+
+.trending-carousel.smooth {
+  scroll-behavior: smooth;
+}
+
+.trending-movie-card {
+  flex-shrink: 0;
+  width: 12rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  user-select: none;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.trending-movie-card.dragging {
+  transition: none;
+  pointer-events: none;
+}
+
+.trending-movie-card:hover {
+  transform: scale(1.05);
+}
+
+.trending-movie-card.dragging:hover {
+  transform: none;
+}
+
+.trending-movie-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.trending-movie-image {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  display: block;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.trending-movie-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.trending-movie-overlay:hover {
+  opacity: 1;
+}
+
+.trending-movie-overlay.dragging:hover {
+  opacity: 0;
+}
+
+.trending-movie-title {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: rgb(209, 213, 219);
+  transition: color 0.2s ease;
+}
+
+.trending-progress-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.trending-progress-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trending-progress-dot.active {
+  background-color: #3b82f6;
+}
+
+.trending-progress-dot.inactive {
+  background-color: #6b7280;
+} 
